@@ -1,0 +1,34 @@
+<div class="generic-container" data-ng-controller="ReportController as ctrl">
+	<div id="header">
+		<a href="#home" class="btn btn-primary back homeBtn"><i class="fa fa-home"></i></a>
+		<div class="headerInfo">Searched By: {{search}}</div>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th data-ng-repeat="u in ctrl.tableHeaders" data-ng-click="sort(u.name)" data-ng-class="{'selected':select === u.name}" class="sort">
+					<div data-ng-class="{'displayArrow':select === u.name && order === 1}" class="upArrow"></div>
+					<span data-ng-bind="u.display"></span>
+					<div data-ng-class="{'displayArrow':select === u.name && order === 2}" class="downArrow"></div>
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat="u in ctrl.employeeList | orderBy: filter">
+				<td><span data-ng-bind="u.empId"></span></td>
+				<td><span data-ng-bind="u.name"></span></td>
+				<td><span data-ng-bind="u.status"></span></td>
+				<td><span data-ng-bind="u.wtr"></span></td>
+				<td><span data-ng-bind="u.wl"></span></td>
+				<td><span data-ng-bind="u.cl"></span></td>
+				<td><span data-ng-bind="u.hl"></span></td>
+				<td><span data-ng-bind="u.phone"></span></td>
+				<td><span data-ng-bind="u.email"></span></td>
+				<td>
+					<button type="button" data-ng-click="viewEmployee(u.empId)" class="btn btn-primary">View</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

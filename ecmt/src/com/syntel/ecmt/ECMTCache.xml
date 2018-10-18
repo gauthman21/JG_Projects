@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.7.0_71" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="main.model.Profile">
+    <void property="account">
+     <object class="main.model.Account">
+      <void property="account">
+       <void property="id">
+        <string>1</string>
+       </void>
+       <void property="name">
+        <string>Amex</string>
+       </void>
+      </void>
+      <void property="spoc">
+       <void property="email">
+        <string>Sabe@Syntelinc.com</string>
+       </void>
+       <void property="id">
+        <string>36</string>
+       </void>
+       <void property="name">
+        <string>Sabe</string>
+       </void>
+       <void property="phone">
+        <string>232-777-2545</string>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void property="comments">
+     <object class="main.model.Comments">
+      <void property="comments">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="main.model.Comment">
+          <void property="comment">
+           <string>Spoke with Mike today, he does NOT want to relocate, and is asking about salary increase.</string>
+          </void>
+          <void property="commentId">
+           <string>11</string>
+          </void>
+          <void property="date">
+           <string>2017-05-12</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="main.model.Comment">
+          <void property="comment">
+           <string>He said yes</string>
+          </void>
+          <void property="commentId">
+           <string>12</string>
+          </void>
+          <void property="date">
+           <string>2017-05-18</string>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="employee">
+     <object class="main.model.Employee">
+      <void property="cl">
+       <string>Phoenix, AZ</string>
+      </void>
+      <void property="doj">
+       <string>2016-12-14</string>
+      </void>
+      <void property="email">
+       <string>Mike_Cooper@Syntelinc.com</string>
+      </void>
+      <void property="empId">
+       <string>5037067</string>
+      </void>
+      <void property="hl">
+       <string>Minneapolis,MN</string>
+      </void>
+      <void property="name">
+       <string>Mike Cooper</string>
+      </void>
+      <void property="phone">
+       <string>(123)456-7899</string>
+      </void>
+      <void property="status">
+       <string>Billable</string>
+      </void>
+      <void property="tenure">
+       <string>2017-05-12</string>
+      </void>
+      <void property="wl">
+       <string>Phoenix,AZ</string>
+      </void>
+      <void property="wtr">
+       <string>N/A</string>
+      </void>
+     </object>
+    </void>
+    <void property="history">
+     <object class="main.model.History">
+      <void property="comments">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="main.model.Comment">
+          <void property="comment">
+           <string>Employee created</string>
+          </void>
+          <void property="date">
+           <string>2017-05-03</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="main.model.Comment">
+          <void property="comment">
+           <string>Changes made to: Status(Bench to Billable), Tenure, Phone, Account(null to null), Account SPOC(null to null)</string>
+          </void>
+          <void property="date">
+           <string>2017-05-12</string>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="rm">
+     <object class="main.model.RM"/>
+    </void>
+    <void property="skills">
+     <object class="main.model.EmpSkills">
+      <void property="empId">
+       <string>5037067</string>
+      </void>
+      <void property="skills">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="main.model.Skill">
+          <void property="key">
+           <string>236</string>
+          </void>
+          <void property="skillName">
+           <string>Java</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="main.model.Skill">
+          <void property="key">
+           <string>237</string>
+          </void>
+          <void property="skillName">
+           <string>HTML</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="main.model.Skill">
+          <void property="key">
+           <string>238</string>
+          </void>
+          <void property="skillName">
+           <string>CSS</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="main.model.Skill">
+          <void property="key">
+           <string>239</string>
+          </void>
+          <void property="skillName">
+           <string>SQL&#13;</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="main.model.Skill">
+          <void property="key">
+           <string>243</string>
+          </void>
+          <void property="skillName">
+           <string>Testing</string>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="trainings">
+     <object class="main.model.TrainedEmpSkills">
+      <void property="empId">
+       <string>5037067</string>
+      </void>
+      <void property="skills">
+       <object class="java.util.ArrayList"/>
+      </void>
+     </object>
+    </void>
+    <void property="vertical">
+     <object class="main.model.Vertical">
+      <void property="spoc">
+       <void property="email">
+        <string>Charuhas_K@syntelinc.com</string>
+       </void>
+       <void property="id">
+        <string>1</string>
+       </void>
+       <void property="name">
+        <string>Charuhas</string>
+       </void>
+       <void property="phone">
+        <string>555-555-5535</string>
+       </void>
+      </void>
+      <void property="vertical">
+       <void property="id">
+        <string>1</string>
+       </void>
+       <void property="name">
+        <string>BNFS</string>
+       </void>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="main.model.Profile">
+    <void property="account">
+     <object class="main.model.Account">
+      <void property="account">
+       <void property="id">
+        <string>1</string>
+       </void>
+       <void property="name">
+        <string>Amex</string>
+       </void>
+      </void>
+      <void property="spoc">
+       <void property="email">
+        <string>Sabe@Syntelinc.com</string>
+       </void>
+       <void property="id">
+        <string>36</string>
+       </void>
+       <void property="name">
+        <string>Sabe</string>
+       </void>
+       <void property="phone">
+        <string>232-777-2545</string>
+       </void>
+      </void>
+     </object>
+    </void>
+    <void property="comments">
+     <object class="main.model.Comments">
+      <void property="comments">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="main.model.Comment">
+          <void property="comment">
+           <string>This is a test.</string>
+          </void>
+          <void property="commentId">
+           <string>9</string>
+          </void>
+          <void property="date">
+           <string>2017-05-10</string>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="main.model.Comment">
+          <void property="comment">
+           <string>Testing again</string>
+          </void>
+          <void property="commentId">
+           <string>10</string>
+          </void>
+          <void property="date">
+           <string>2017-05-10</string>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="employee">
+     <object class="main.model.Employee">
+      <void property="cl">
+       <string>Phoenix,AZ</string>
+      </void>
+      <void property="doj">
+       <string>2017-05-09</string>
+      </void>
+      <void property="email">
+       <string>John_Doe@syntelinc.com</string>
+      </void>
+      <void property="empId">
+       <string>1234567</string>
+      </void>
+      <void property="hl">
+       <string>Phoenix,AZ</string>
+      </void>
+      <void property="name">
+       <string>John Doe</string>
+      </void>
+      <void property="phone">
+       <string>(999)777-5555</string>
+      </void>
+      <void property="status">
+       <string>Bench</string>
+      </void>
+      <void property="tenure">
+       <string>2017-05-09</string>
+      </void>
+      <void property="wl">
+       <string>Phoenix,AZ</string>
+      </void>
+      <void property="wtr">
+       <string>No</string>
+      </void>
+     </object>
+    </void>
+    <void property="history">
+     <object class="main.model.History">
+      <void property="comments">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="main.model.Comment">
+          <void property="comment">
+           <string>Changes made to: Current Location, Account(null to null), Account SPOC(null to null)</string>
+          </void>
+          <void property="date">
+           <string>2017-05-10</string>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="rm">
+     <object class="main.model.RM"/>
+    </void>
+    <void property="skills">
+     <object class="main.model.EmpSkills">
+      <void property="empId">
+       <string>1234567</string>
+      </void>
+      <void property="skills">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="main.model.Skill">
+          <void property="key">
+           <string>244</string>
+          </void>
+          <void property="skillName">
+           <string>N/A</string>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="trainings">
+     <object class="main.model.TrainedEmpSkills">
+      <void property="empId">
+       <string>1234567</string>
+      </void>
+      <void property="skills">
+       <object class="java.util.ArrayList">
+        <void method="add">
+         <object class="main.model.Skill">
+          <void property="key">
+           <string>20</string>
+          </void>
+          <void property="skillName">
+           <string>Java</string>
+          </void>
+         </object>
+        </void>
+       </object>
+      </void>
+     </object>
+    </void>
+    <void property="updated">
+     <boolean>true</boolean>
+    </void>
+    <void property="vertical">
+     <object class="main.model.Vertical">
+      <void property="spoc">
+       <void property="email">
+        <string>Charuhas_K@syntelinc.com</string>
+       </void>
+       <void property="id">
+        <string>1</string>
+       </void>
+       <void property="name">
+        <string>Charuhas</string>
+       </void>
+       <void property="phone">
+        <string>555-555-5535</string>
+       </void>
+      </void>
+      <void property="vertical">
+       <void property="id">
+        <string>1</string>
+       </void>
+       <void property="name">
+        <string>BNFS</string>
+       </void>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

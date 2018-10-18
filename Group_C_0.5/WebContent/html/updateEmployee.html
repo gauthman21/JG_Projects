@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Employee</title>
+</head>
+<body>
+	<div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Employee Management</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-panel"></i>
+								<p>About Us</p>
+                            </a>
+                        </li>
+                        
+						<li>
+                            <a href="../jsp/logout.jsp">
+								<i class="ti-settings"></i>
+								<p>Logout</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        
+        
+	<div class="content">
+        <div class="container-fluid">
+			<div class="col-lg-8 col-md-7">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Update Employee</h4>
+                        </div>
+                        <div class="content">
+                           <form  method = "post">
+                           	
+                           		<input type="number" id="employeeid" name="employeeid" value='<%= e.getEmployeeid()%>' hidden>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>First Name:</label>
+                                            <input type="text" class="form-control border-input" name="efname"  value='<%= e.getEfname()%>' readonly>
+                                        </div>
+                                    </div>
+                         
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Last Name:</label>
+                                            <input type="text" class="form-control border-input" name="elname"  value='<%= e.getElname()%>' readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Phone:</label>
+                                            <input type="text" class="form-control border-input" name="ephone"  value='<%= e.getEphone()%>' required>
+                                        </div>
+                                    </div>
+                             
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Email:</label>
+                                            <input type="text" class="form-control border-input" name="eemail"  value='<%= e.getEemail()%>' required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                         <label>Access Level:</label>
+                                           <select id="access" name="eaccess" class="form-control border-input">
+												<option value="Select">- Select an access level -</option>
+												<option id="Employee" value="Employee">Employee</option>
+												<option id="Driver" value="Driver">Driver</option>
+												<option id="Admin" value="Admin">Admin</option>
+										</select>
+										</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Username:</label>
+                                            <input type="text" class="form-control border-input" name="eusername" value='<%= e.getEusername()%>' required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Password:</label>
+                                            <input type="password" class="form-control border-input" name="epassword" value='<%= e.getEpassword()%>' required>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="text-center">
+                                        <input type="submit" class="btn btn-success btn-fill btn-wd" name="submit" value="Update Employee">
+                                 </div>
+                                
+                            </form>
+                         </div>
+                     </div>
+                   </div>

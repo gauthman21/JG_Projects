@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Package Management</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-panel"></i>
+								<p>About Us</p>
+                            </a>
+                        </li>
+                        
+						<li>
+                           <a href="../jsp/logout.jsp">
+								<i class="ti-settings"></i>
+								<p>Logout</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+<div class="content">
+        <div class="container-fluid">
+			<div class="col-lg-7 col-md-8">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Add Package</h4>
+                        </div>
+                        <div class="content">
+                           <form  method = "post">
+                           <input type="text" name="packageID" value='<%=pack.getPackageID()%>' hidden >
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Package Name:</label>
+                                            <input type="text" class="form-control border-input" name="packageName"  value='<%=pack.getPackageName() %>'>
+                                        </div>
+                                    </div>
+                                     <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Package Description:</label>
+                                            <textarea class="form-control border-input" name="description"><%=pack.getDescription() %></textarea>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Price:</label>
+                                            <input type="text" class="form-control border-input" name="price"  value='<%=pack.getPrice() %>'>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Meal time</label>
+                                            <select name="mealTime" class="form-control border-input">
+                                              <option value="Select">- Select Meal Time -</option>
+											  <option value="breakfast">Breakfast</option>
+											  <option value="lunch">Lunch</option>
+											  <option value="dinner">Dinner</option>
+											</select>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Type: </label>
+                                            <input type="radio" name="vegitarian" value="0"> Veg 
+  											<input type="radio" name="vegitarian" value="1"> Non-Veg<br> 
+                                        </div>
+                                    </div>
+                                </div>
+                              	
+		
+
+
+<!-- 
+<form method="post">
+	<br>
+	
+	<input type="text" name="packageID" value='<%=pack.getPackageID()%>' hidden >
+	<br><label> Package name</label><input type="text" name ="packageName" value='<%=pack.getPackageName() %>'>
+	<br><br> <label> Description</label> <textarea name="description" ><%=pack.getDescription() %></textarea>
+	<br><br><label>Price</label><input type="text" name="price"  value='<%=pack.getPrice() %>'>
+	<br><br><label>Meal time</label>
+		<select name="mealTime">
+		  <option id="breakfast" value="breakfast">Breakfast</option>
+		  <option id="lunch"  value="lunch">Lunch</option>
+		  <option id="dinner"  value="dinner">Dinner</option>
+		</select>
+	<br><br><label>Type</label>
+		<input type="radio" id="r0" name="Vegitarian" value="0"> Veg<br>
+  		<input type="radio" id="r1" name="Vegitarian" value="1"> Non-Veg<br>
+	<br><br> <label>Picture</label><input type="file"></input>
+
+ -->

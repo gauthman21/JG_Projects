@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitionl//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div class="main-panel">
+   <nav class="navbar navbar-default">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <a class="navbar-brand" href="#">Item Management</a>
+           </div>
+           <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav navbar-right">
+                   <li>
+                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="ti-panel"></i>
+			<p>About Us</p>
+                       </a>
+                   </li>
+                   
+	<li>
+                       <a href="../jsp/logout.jsp">
+			<i class="ti-settings"></i>
+			<p>Logout</p>
+                       </a>
+                   </li>
+               </ul>
+
+           </div>
+       </div>
+   </nav>
+
+	<div class="content">
+        <div class="container-fluid">
+			<div class="col-lg-4 col-md-5">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Update Item</h4>
+                        </div>
+                        <div class="content">
+                           <form  method = "post">
+                           <input type="text" name="itemID" value='<%=item.getItemID()%>' hidden>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Item Name:</label>
+                                            <input type="text" class="form-control border-input" name="itemName" value='<%=item.getItemName()%>'>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Item category:</label>
+                                            <select name="itemCategroy" class="form-control border-input">
+                                              <option value="Select">- Select an Item Category -</option>
+											  <option id="Drinks" value="Drinks">Drinks</option>
+											  <option id="Food" value="Food">Food</option>
+											    <option id="Magic" value="Magic">Magic</option>
+											</select>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Item Description:</label>
+                                            <textarea name="description" class="form-control border-input"><%= item.getDescription()%></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="text-center">
+                                        <input type="submit" class="btn btn-success btn-fill btn-wd" name="submit" value="Update item">
+                                 </div>
+                                
+                            </form>
+                         </div>
+                     </div>
+                   </div>
+                

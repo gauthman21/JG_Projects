@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../libs/dashboard.css">
+  <link rel="stylesheet" href="../libs/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+</head>
+
+
+<div class="wrapper">
+    <div class="sidebar" data-background-color="black" data-active-color="danger">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="" id="" class="simple-text">
+                   <%=session.getAttribute("name") %>
+                </a>
+            </div>
+
+            <ul class="nav" id="navMenus">
+                <li class="dashli">
+                    <a href="../jsp/home.jsp">
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="todayli">
+                    <a href="../jsp/todaysManage.jsp">
+                     
+                        <p>Todays' Manage</p>
+                    </a>
+                </li>
+                <li class="itemli">
+                    <a href="../jsp/itemManage.jsp">
+                     
+                        <p>Item Manage</p>
+                    </a>
+                </li>
+                <li class="packli">
+                    <a href="../jsp/package.jsp">
+                       
+                        <p>Package Manage</p>
+                    </a>
+                </li>
+                <li class="areali adminlink">
+                    <a href="../jsp/addArea.jsp">
+                        <p>Area Manage</p>
+                    </a>
+                </li>
+                <li class="orderli">
+                    <a href="../jsp/orderManage.jsp">
+                      
+                        <p>Order Manage</p>
+                    </a>
+                </li>
+                <li class="paymentli adminlink">
+                    <a href="../jsp/paymentManage.jsp">
+                       
+                        <p>Payment Manage</p>
+                    </a>
+                </li>
+                <li class="employeeli adminlink">
+                    <a href="../jsp/addEmployee.jsp">
+                    
+                        <p>Employee Manage</p>
+                    </a>
+                </li>
+                <li class="customerli adminlink">
+                    <a href="../jsp/customerManage.jsp">
+                        <p>customer Manage</p>
+                    </a>
+                </li>
+                <li class="discountli">
+                    <a href="../jsp/discountManage.jsp">
+                       
+                        <p>Discount Manage</p>
+                    </a>
+                </li>
+				
+            </ul>
+    	</div>
+    </div>
+  

@@ -1,0 +1,400 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+}
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: #7AAEDD;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+h1 {
+  color: #fff;
+  font-weight: 900;
+  margin: 0 0 2em;
+  font-size: 5.25em;
+  margin: 0 0 1em;
+  margin-left: 2%;
+}
+.testCountTable{
+	float: left;
+}
+#container{
+	margin-left: 10%;
+    margin-right: 10%;
+}
+#tableContainer{
+	margin-left: 3.4%;
+}
+#testCounts{
+	float: left;
+}
+th,td {
+  border: 1px solid #cecfd5;
+  padding: 10px 15px;
+}
+.runningBGC{
+	background-color: #FFFF66;
+}
+.pend_queBGC{
+	background-color: #FFCC33;
+}
+.passBGC{
+	background-color: #66FF66;
+}
+.failBGC{
+	background-color: #FF6666;
+}
+table{
+	background-color: white;
+}
+legend{
+	color: #ffffff;
+	border: 1px solid white;
+}
+fieldset{
+	margin-top: 2%;
+	border: 1px solid #fff;
+	color: white;
+}
+ul li{
+	display: inline;
+	float: left;
+}
+a{
+	text-decoration: none;
+	color: white;
+}
+.key{
+	display: inline;
+	float: left;
+	margin-left: 5%;
+	margin-top: 2px;
+}
+.arrays{
+	background-color: #3366FF;
+}
+.spartans{
+	background-color: #CC66FF;
+}
+.vms{
+	background-color: #66FFFF;
+}
+.overflow{
+	overflow: auto;
+	height: 600px;
+}
+#main{
+	margin-top: 5%;
+}
+.btn-style{
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  padding: 5px;
+} 
+.btn-style:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+.btn-styleFloat{
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  padding: 5px;
+  margin-left: 87.5%;
+} 
+.btn-styleFloat:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 2px #427388; 
+}
+.ogiFrame{			/*main iFrame*/
+	width: 150%;
+	height: 70%;
+	border: none;
+	position: fixed;
+	top: 35%;
+	right: -57%;
+}
+#iframe0{			/*file directory iFrame(log viewer)*/
+	width: 30%;
+	height: 110%;
+	background: #7AAEDD;
+	overflow: hidden;
+	border: none;
+	margin-top: 0;
+	padding-top: 0;
+	margin-left: 2%;
+}
+h3.login {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+}
+h3.pref {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    float: right;
+    margin-left:10px;
+}
+h3.aref {
+    color: white;
+    font-weight: 400;
+    float: right;
+    padding-left: 15px;
+}
+#static{
+	  position: fixed;
+}
+.invalidPW{
+	position: absolute;
+	top: 115px;
+	left: 10%;
+	color: white;
+}
+.changePWuser{
+	display: inline;
+}
+.user{
+	display: inline-block;
+}
+.adminError{
+	position: fixed;
+	bottom: 83%;
+	color: white;
+	left: 15.5%;
+}
+.adminErrorProject{
+	position: fixed;
+	bottom: 82%;
+	color: white;
+	left: 22%;
+	text-align: center;
+}
+.userError{
+	position: fixed;
+	bottom: 80%;
+	color: white;
+	left: 22%;
+	text-align: center;
+}
+.userErrorPW{
+	position: fixed;
+	bottom: 69%;
+	color: white;
+	left: 8%;
+	text-align: center;
+}
+iframe::-webkit-scrollbar{		/*main iFrame scrollbar is hidden*/
+	background-color: #7AAEDD;
+}
+.success{
+	color: white;
+	position: fixed;
+	top: 60px;
+	left: 150px;
+}
+.error{ 
+	color: red; 
+	font-weight: bold;
+}
+.folder{
+	font-family: "Lucida Console", Times, serif;
+	color: black;
+}
+.file{
+	font-family: "Lucida Console", Times, serif;
+	color: black;
+	float: left;
+	margin-right: 5px;
+}
+.file0{
+	font-family: "Lucida Console", Times, serif;
+	color: black;
+}
+.left-arrow {
+	border: 1px solid;
+  	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  	outline: 1px solid;
+  	outline-color: rgba(255, 255, 255, .5);
+  	outline-offset: 0px;
+  	text-shadow: none;
+  	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	display: inline-block;
+	position: relative;
+	background: #7AAEDD;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 1px;
+	margin-bottom: 1%;
+}
+.left-arrow:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+.left-arrowFloat{
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  padding: 5px;
+  margin-left: 87.5%;
+} 
+.left-arrowFloat:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+.download{
+	font-family: "Lucida Console", Times, serif;
+	color: black;
+	font-size: 12px;
+}
+#inline li, p{
+	display: inline-block;
+}
+.pFile{
+	margin-left: 5px;
+}
+.center{
+	padding: 0;
+}
+.center0{
+	padding: 0;
+	margin-top: 0;
+}
+.download{
+	font-family: "Lucida Console", Times, serif;
+	color: black;
+	font-size: 12px;
+}
+.download:hover{
+	color: white;
+}
+.testNameTable{
+	margin-top: 0;
+	padding-top: 0;
+}
+.timeTable{
+	float: left;
+	margin-bottom: 5%;
+	clear: left;
+}
+.marginTitle{
+	margin-top: 0;
+	padding-top: 0;
+}
+#blackAhref{
+	color: black;
+}
+#blackAhref:hover{
+	color: #7AAEDD;
+}
+#test{
+	margin-top: 0;
+	padding-top: 0;
+}
+#inline li, p{
+	display: inline;
+	float: left;
+}
+.h2Files{
+	margin-top: 0;
+	padding-top: 0;
+}
+nav ul ul {
+	display: none;
+}
+nav ul li:hover > ul {
+	display: block;
+}
+nav ul:after {
+	content: ""; 
+	clear: both; 
+	display: block;
+}
+nav ul li {
+	float: left;
+}
+nav ul li a {
+	display: block; 
+	text-decoration: none;
+}
+nav ul ul {
+	border-radius: 0px; 
+	padding: 0;
+}
+nav ul ul li {
+	float: none; 
+	position: relative;
+}
+.fieldsetDate{
+	magrin-top: 0;
+	padding-top: 0;
+	float: left;
+}
+.htmlTable{
+	margin-bottom: 10%;
+	position: relative;
+	left: 2%;
+	top: 2.4%;
+}
+.reportError{
+	color: white;
+	margin-top: .5%;
+	text-align: center;
+}
+.startEndDate{
+	color: white;
+	position: fixed;
+	top: -2.2%;
+	left: 22%;
+}
+/*
+	 This allows the iframe to move according to pixels.
+	 NOTE: This does not work when laptop is closed and on.
+*/
+@media only screen and (max-width: 1450px), only screen and (max-device-width: 1450px) {
+.ogiFrame{
+	top: 38%;
+}
+.startEndDate{
+	left: 25%;
+}
+.overflow{
+	height: 500px;
+}
+#directoryDiv{
+	margin-bottom: 5%;
+}
+}

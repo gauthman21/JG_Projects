@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="../libs/dashboard.css">
+	<link rel="stylesheet" href="../libs/bootstrap.min.css"></link>
+	<link rel="stylesheet" href="../libs/style.css"></link>
+	<script src="../libs/jquery-2.1.4.min.js"> </script>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Sign in</title>
+	
+	<script>	
+	</script>
+</head>
+<body>
+
+<div class="loginbody"></div>
+	<div align="center" style="padding-top: 8em; ">
+		<div class="card" style="width: 30rem;" align="center">
+			<div class="card-block">
+				<form method = "POST"> 	
+				
+					<div class="card-header"><h4>Employee Login</h4></div>
+					<div class="card-block">
+						<div class="form-group row">
+							<label class="col-4 col-form-label"> Username: </label>
+							<div class="col-8">
+								<input type="text" class="form-control"  name="eusername" placeholder="Enter Username">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label class="col-4 col-form-label"> Password: </label>
+							<div class="col-8">
+								<input type="password" class="form-control" name = "epassword" placeholder="Enter Password">
+							</div>
+						</div>
+						<div class="form-group" align="center">
+							<input type="submit" name="submit" class="btn btn-success" value="Signin">						
+						</div>
+						
+						<div class="form-group" align="center">
+							<div id="faildiv" class="alert alert-danger">Login Failed!! Check username/password</div>
+						</div>
+					</div>
+							
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

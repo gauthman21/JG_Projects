@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="landing-container" data-ng-controller="EmployeeController as ctrl">
+	<img src="static/img/mockSyntelLogo.jpg" id="logo"/>
+	<div id="title">
+		<h2>Admin Page</h2>
+	</div>
+	<div>
+		<div>Vertical Box: total list of verticals to add or delete from</div> 
+		<div id="verticals">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>
+								Verticals
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="u in ctrl.emp.vertical">
+							<td>
+								<span data-ng-bind="u.verticalName" data-ng-show="!u.edit"></span>
+								<input class="form-control smallField" type="text" data-ng-show="u.edit" data-ng-model="u.verticalName"/>
+								<i class="fa fa-close editIcon" data-ng-click="deleteVertical(u)" data-ng-show="editing()"></i>
+								<i class="fa fa-pencil editIcon" data-ng-click="editVertical(u)" data-ng-show="editing() && !u.edit"></i>
+								<i class="fa fa-check editIcon" data-ng-click="submitVertical(u)" data-ng-show="editing() && u.edit"></i>
+							</td>
+						</tr>
+						<tr data-ng-show="addingVertical()">
+							<td>
+								<input class="form-control smallField" type="text" data-ng-model="ctrl.newVertical"/>
+								<i class="fa fa-close editIcon" data-ng-click="deleteNewVertical()"></i>
+								<i class="fa fa-check editIcon" data-ng-click="submitNewVertical()"></i>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="button" data-ng-click="addSkill()" class="btn btn-primary addBtn" data-ng-show="editing() && !addingSkill()" data-ng-disabled="addingEmp"><i class="fa fa-plus"></i></button>
+			</div>
+		<table class="table table-hover">
+					<col><col><col><col>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Vertical</th>
+							<th>Account</th>
+							<th>RM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Name</td>
+							<td>
+								<select class="form-control mediumField littlePad" data-ng-class="{required: (ctrl.emp.vertical.vertical.id == 0)}" data-ng-model="ctrl.emp.vertical.vertical" data-ng-options="vert as vert.name for vert in ctrl.verticles track by vert.id" data-ng-change="verticalChange()"></select>
+							</td>
+							<td>
+								<select class="form-control mediumField littlePad" data-ng-model="ctrl.emp.account.account" data-ng-options="acc as acc.name for acc in ctrl.accounts track by acc.id" data-ng-change="accountChange()"></select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>SPOC</td>
+							<td>
+								<select class="form-control longField littlePad" data-ng-model="ctrl.emp.vertical.spoc" data-ng-options="spoc as spoc.name for spoc in ctrl.verticalSpocs track by spoc.id" data-ng-disabled="ctrl.emp.vertical.vertical.id == 0"></select>
+							</td>
+							<td>
+								<select class="form-control longField littlePad" data-ng-model="ctrl.emp.account.spoc" data-ng-options="spoc as spoc.name for spoc in ctrl.accountSpocs track by spoc.id" data-ng-disabled="ctrl.emp.account.account.id == 0"></select>
+							</td>
+							<td><input class="form-control longField" type="text" data-ng-model="ctrl.emp.rm.rm"/></td>
+						</tr>
+						<tr>
+							<td>Phone</td>
+							<td>{{ctrl.emp.vertical.spoc.phone}}</td>
+							<td>{{ctrl.emp.account.spoc.phone}}</td>
+							<td><input class="form-control longField" type="text" data-ng-model="ctrl.emp.rm.phone"/></td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>{{ctrl.emp.vertical.spoc.email}}</td>
+							<td>{{ctrl.emp.account.spoc.email}}</td>
+							<td><input class="form-control longField" type="text" data-ng-model="ctrl.emp.rm.email"/></td>
+						</tr>
+					</tbody>
+				</table>
+	</div>
+</div>	
+</body>
+</html>

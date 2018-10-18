@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Hibernate Configuration file -Required -Warning probably wont go away 
+	until it can connect to the internet and find the dtd file -Trust me, I've 
+	tried -->
+
+<!DOCTYPE hibernate-configuration SYSTEM
+	"classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<property name="connection.driver.class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://192.168.2.5:3306/benchskillenhancement</property>
+		<property name="connection.username">admin</property>
+		<property name="connection.password">20Syntel15</property>
+
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+
+		<mapping class="main.model.Contact" />
+		<mapping class="main.model.EmpSkills" />
+		<mapping class="main.model.Location" />
+		<mapping class="main.model.LoginInfo" />
+		<mapping class="main.model.Profile" />
+		<mapping class="main.model.ProgressTracker" />
+		<mapping class="main.model.Register" />
+		<mapping class="main.model.SkillCat" />
+		<mapping class="main.model.SkillList" />
+
+
+	</session-factory>
+
+</hibernate-configuration>

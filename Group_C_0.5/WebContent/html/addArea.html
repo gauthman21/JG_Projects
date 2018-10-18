@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Area</title>
+</head>
+<body>
+	<div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Area Management</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-panel"></i>
+								<p>About Us</p>
+                            </a>
+                        </li>
+                        
+						<li>
+                            <a href="../jsp/logout.jsp">
+								<i class="ti-settings"></i>
+								<p>Logout</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        
+        
+        <div class="content">
+        <div class="container-fluid">
+			<div class="col-lg-4 col-md-5">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Add Area</h4>
+                        </div>
+                        <div class="content">
+                           <form  method = "post">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Location:</label>
+                                            <input type="text" class="form-control border-input" id="location" name="location">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Zip Code:</label>
+                                            <input type="text"  id="zipcode" name="zipcode"  class="form-control border-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="text-center">
+                                        <input type="submit" class="btn btn-success btn-fill btn-wd" name="submit" value="Add Area">
+                                 </div>
+                                
+                            </form>
+                         </div>
+                     </div>
+                   </div>
+                
+                 
+                  <div class="col-lg-8 col-md-7">
+                        <div class="card">
+                            <div class="header">
+                             	<h4 class="title">Current Areas</h4>
+                              
+                            </div>
+                            <div class="content">
+                       

@@ -1,0 +1,48 @@
+<div id="landing-container" data-ng-controller="SearchController as ctrl">
+	<img src="static/img/mockSyntelLogo.jpg" id="logo"/>
+	<div id="title">
+		<h2>Employee Communication Management Tool</h2>
+	</div>
+	<div id="searchArea">
+		<form class="searchForm" data-ng-submit="searchID()">
+			<div class="empIDSearch">
+				<div class="myRow">
+					<input class="form-control" data-ng-model="ctrl.fields.empId" type="text"/>
+				</div>
+				<div class="myRow">
+					<label>Emp ID</label>
+					<button type="submit" class="btn btn-primary search"><i class="fa fa-search"></i></button>
+				</div>
+			</div>
+		</form>
+		<form id="reportForm" class="searchForm">
+			<div class="reportsSearch">
+				<div class="myRow">
+					<select class="form-control" data-ng-model="ctrl.fields.reportOption" data-ng-options="x for x in ctrl.options" data-ng-change="reportChange()">
+						<option value="">report type</option>
+					</select>
+				</div>
+				<div class="myRow" data-ng-show="searchingSkill()">
+					<label class="hiddenLabel">Skill:</label>
+					<input class="form-control skillField" data-ng-model="ctrl.fields.skill" type="text"/>
+				</div>
+				<div class="myRow" data-ng-show="searchingTenure()">
+					<label class="hiddenLabel">From:</label>
+					<input class="form-control tenureField" data-ng-model="ctrl.fields.tenureStart" type="number" placeholder="0"/>
+					<label class="hiddenLabel">to:</label>
+					<input class="form-control tenureField" data-ng-model="ctrl.fields.tenureEnd" type="number"/>
+				</div>
+				<div class="myRow">
+					<label>Reports</label>
+					<button type="submit" data-ng-click="searchReport()" class="btn btn-primary search"><i class="fa fa-search"></i></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<button type="button" data-ng-click="admin()" class="btn btn-success admin">Admin Button</button>
+	<button type="button" data-ng-click="add()" class="btn btn-success add">Add Employee</button>
+	<input type="file" id="importFile" accept=".csv" onchange="angular.element(this).scope().importFile()"/>
+	<label for="importFile" class="btn btn-success add">Add Employee Batch</label>
+	<!-- <p>Database on/off</p><input type="checkbox" data-ng-click="switchDatabaseConn()" ng-true-value="true" ng-false-value="false" data-ng-model="check"/> {{ check }} -->
+	<!-- <p>Database on/off</p><input id="checkValue" onclick=" checkVal(this)" type="checkbox" /> -->
+</div>

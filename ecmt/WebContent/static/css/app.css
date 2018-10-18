@@ -1,0 +1,379 @@
+body {
+	font-family: DejaVu Sans, sans-serif;
+	background: lightgrey;
+	background: -webkit-linear-gradient(bottom left, grey, white);
+	background: -o-linear-gradient(bottom left, white, grey);
+	background: -moz-linear-gradient(bottom left, white, grey);
+	background: linear-gradient(to bottom left, white, grey);
+}
+
+.generic-container {
+	padding: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+tr {
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.headerInfo {
+	text-align: center;
+	font-size: 20px;
+}
+
+/* --------- Landing page CSS --------- */
+#logo {
+	position: absolute;
+	left: 10px;
+	top: 11px;
+	max-height: 98px;
+	max-width: 245px;
+}
+
+#landing-container {
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+.search {
+	float: right;
+}
+
+#searchArea {
+	width: 205px;
+	margin: auto;
+}
+
+.myRow {
+	margin-top: 10px;
+	text-align: left;
+	height: 34px;
+}
+
+.add {
+	margin: 0 20px 0 20px;
+}
+
+.searchForm {
+	margin-top: 30px;
+}
+
+#title {
+	margin-bottom: 120px;
+}
+
+#reportForm {
+	margin-bottom: 120px;
+}
+
+.skillField {
+	width: 150px;
+}
+
+.tenureField {
+	width: 56px;
+	float: left;
+	padding: 6px;
+}
+
+.hiddenLabel {
+	float: left;
+	margin: 7px 5px;
+}
+
+input[type=file] {
+	display: none;
+}
+
+/* --------- Details page CSS --------- */
+
+#header {
+	border-bottom: 2px solid black;
+	height: 42px;
+}
+
+.back {
+	margin-right: 5px;
+	position: absolute;
+}
+
+.reportBtn {
+	margin-left: 43px;
+}
+
+.homeBtn {
+	padding: 6px 8px 6px 8px;
+}
+
+.fa-home {
+	font-size: 1.5em;
+}
+
+.edit, .submit {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.delete {
+	position: absolute;
+	right: 86px;
+	top: 5px;
+}
+
+#mainSection {
+	width: 84%;
+	float: left;
+}
+
+#profileSection {
+	width: 100%;
+	float: left;
+	box-shadow: -2px 2px 10px -2px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+#profileInfo {
+	width: 72%;
+	float: left;
+	padding-left: 5px;
+}
+
+#skills {
+	width: 14%;
+	float: left;
+	border-left: 2px solid #efefef;
+}
+
+#trainings {
+	width: 14%;
+	float: left;
+}
+
+#communicationSection {
+	width: 100%;
+	text-align: center;
+	padding: 0 125px 0 125px;
+}
+
+.comments {
+	text-align: left;
+	margin: 10px 0 5px;
+}
+
+.commentText {
+	width: 100%;
+	max-width: 100%;
+}
+
+textarea.form-control {
+	height: 70px;
+}
+
+#historySection {
+	width: 16%;
+	height: 93%;
+	float: left;
+	text-align: center;
+	box-shadow: -2px 2px 10px -2px;
+	padding: 7px 10px 0 10px;
+	overflow-y: auto;
+}
+
+.history {
+	margin: 5px 0 10px;
+	text-align: left;
+	font-size: 0.9em;
+}
+
+.empForm {
+	width: 100%;
+	height: 80px;
+}
+
+.saveBtn {
+	float: right;
+	margin-top: 5px;
+}
+
+.addBtn {
+	padding: 1px 2px 0 2px;
+	margin-left: 5px;
+}
+
+.profileSection {
+	border-top: 1px solid black;
+}
+
+.wide {
+	width: 100%;
+	margin: 15px 0 15px 5px;
+}
+
+.narrow {
+	width: 32%;
+	float: left;
+}
+
+.narrower {
+	width: 25%;
+	float: left;
+}
+
+.block {
+	display: block;
+	margin: 0 0 15px 5px;
+}
+
+.center {
+	text-align: center;
+}
+
+.space {
+	margin-left: 10px;
+}
+
+col:nth-child(even) {
+	background-color: lightgrey;
+}
+
+.table>tbody>tr>td {
+	border-top: 0;
+}
+
+.table {
+	margin-bottom: 10px;
+	font-size: 1em;
+}
+
+.editIcon {
+	width: 15px;
+	height: 15px;
+	float: right;
+	margin-right: 5px;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.commentEditIcon {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 102px;
+	margin-top: 3px;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.commentDeleteIcon {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 82px;
+	margin-top: 3px;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+.fa-close:hover {
+	color: red;
+}
+
+.fa-pencil:hover, .fa-check:hover {
+	color: green;
+}
+
+.smallField {
+	display: inline;
+	width: 100px;
+	height: 20px;
+}
+
+.mediumField {
+	display: inline;
+	width: 145px;
+	height: 20px;
+}
+
+.longField {
+	display: inline;
+	width: 250px;
+	height: 20px;
+}
+
+.littlePad {
+	padding: 0 0 0 6px;
+}
+
+.required {
+	box-shadow: inset 0 0 2px 3px pink;
+}
+
+/* --------- Reports page CSS --------- */
+
+.sort {
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+	position: relative;
+}
+
+.sort:hover, .selected{
+	background-color: white;
+}
+
+.upArrow {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-top: 10px solid black;
+	border-left: 10px solid transparent;
+	display: none;
+}
+
+.downArrow {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-bottom: 10px solid black;
+	border-left: 10px solid transparent;
+	display: none;
+}
+
+.displayArrow {
+	display: block;
+}
+
+/* --------- Attrition page CSS --------- */
+
+#attritionBody {
+	width: 100%;
+}
+
+.attirionSection {
+	width: 33.3%;
+}
+
+/* --------- Checkbox landing page CSS --------- */

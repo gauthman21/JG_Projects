@@ -1,0 +1,12 @@
+c:\users\justin\documents\visual studio 2013\Projects\dellProject\dellProject\bin\Debug\dellProject.exe.config
+c:\users\justin\documents\visual studio 2013\Projects\dellProject\dellProject\bin\Debug\dellProject.exe
+c:\users\justin\documents\visual studio 2013\Projects\dellProject\dellProject\bin\Debug\dellProject.pdb
+c:\users\justin\documents\visual studio 2013\Projects\dellProject\dellProject\obj\Debug\dellProject.csprojResolveAssemblyReference.cache
+c:\users\justin\documents\visual studio 2013\Projects\dellProject\dellProject\obj\Debug\dellProject.exe
+c:\users\justin\documents\visual studio 2013\Projects\dellProject\dellProject\obj\Debug\dellProject.pdb
+C:\Users\justin\Desktop\Projects\dellProject\dellProject\bin\Debug\dellProject.exe.config
+C:\Users\justin\Desktop\Projects\dellProject\dellProject\obj\Debug\dellProject.exe
+C:\Users\justin\Desktop\Projects\dellProject\dellProject\obj\Debug\dellProject.pdb
+C:\Users\justin\Desktop\Projects\dellProject\dellProject\bin\Debug\dellProject.exe
+C:\Users\justin\Desktop\Projects\dellProject\dellProject\bin\Debug\dellProject.pdb
+C:\Users\justin\Desktop\Projects\dellProject\dellProject\obj\Debug\dellProject.csprojResolveAssemblyReference.cache

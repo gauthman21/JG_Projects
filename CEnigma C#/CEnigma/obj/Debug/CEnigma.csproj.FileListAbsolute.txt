@@ -1,0 +1,30 @@
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\CEnigma.exe.config
+C:\Object Oriented I\CEnigma\CEnigma\obj\Debug\CEnigma.csprojResolveAssemblyReference.cache
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\CEnigma.exe
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\CEnigma.pdb
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\DataSet.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\InputEnigma.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\Location.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\Odometer.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\Portals.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\PrintScreen.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\Properties.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\WheelV3.dll
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\XML Output.dll
+C:\Object Oriented I\CEnigma\CEnigma\obj\Debug\CEnigma.exe
+C:\Object Oriented I\CEnigma\CEnigma\obj\Debug\CEnigma.pdb
+C:\Object Oriented I\CEnigma\CEnigma\bin\Debug\Rotor.dll
+C:\Users\justin\Desktop\CEnigma C#\CEnigma\bin\Debug\CEnigma.exe.config
+C:\Users\justin\Desktop\CEnigma C#\CEnigma\obj\Debug\CEnigma.exe
+C:\Users\justin\Desktop\CEnigma C#\CEnigma\obj\Debug\CEnigma.pdb
+C:\Users\justin\Desktop\CEnigma C#\CEnigma\bin\Debug\CEnigma.exe
+C:\Users\justin\Desktop\CEnigma C#\CEnigma\bin\Debug\CEnigma.pdb
+C:\Users\justin\Desktop\CEnigma C#\CEnigma\bin\Debug\Rotor.dll
+C:\Users\justin\Desktop\CEnigma C#\CEnigma\obj\Debug\CEnigma.csprojResolveAssemblyReference.cache
+C:\Users\justin\Desktop\Projects\CEnigma C#\CEnigma\bin\Debug\CEnigma.exe.config
+C:\Users\justin\Desktop\Projects\CEnigma C#\CEnigma\obj\Debug\CEnigma.exe
+C:\Users\justin\Desktop\Projects\CEnigma C#\CEnigma\obj\Debug\CEnigma.pdb
+C:\Users\justin\Desktop\Projects\CEnigma C#\CEnigma\bin\Debug\CEnigma.exe
+C:\Users\justin\Desktop\Projects\CEnigma C#\CEnigma\bin\Debug\CEnigma.pdb
+C:\Users\justin\Desktop\Projects\CEnigma C#\CEnigma\bin\Debug\Rotor.dll
+C:\Users\justin\Desktop\Projects\CEnigma C#\CEnigma\obj\Debug\CEnigma.csprojResolveAssemblyReference.cache

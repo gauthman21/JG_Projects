@@ -1,0 +1,251 @@
+<div class="generic-container" data-ng-controller="EmployeeController as ctrl">
+	<div id="header">
+		<a href="#home" class="btn btn-primary back homeBtn"><i class="fa fa-home"></i></a>
+		<button type="button" data-ng-click="toReport()" class="btn btn-primary back reportBtn" data-ng-show="fromReport()">Back to Report</button>
+		<div class="headerInfo" >Employee Detail</div>
+		<button type="button" data-ng-click="edit()" class="btn btn-success edit" data-ng-show="notEditing()">Edit</button>
+		<button type="button" data-ng-click="submit()" class="btn btn-primary submit" data-ng-show="editing()" data-ng-disabled="missingFields()">Submit</button>
+		<button type="button" data-ng-click="del()" class="btn btn-danger delete" data-ng-show="editing()">Delete</button>
+	</div>
+	<div id="mainSection">
+		<div id="profileSection">
+			<div id="profileInfo" data-ng-show="notEditing()">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Emp ID</th>
+							<th>Name</th>
+							<th>Status</th>
+							<th>Tenure of Status</th>
+							<th>DOJ</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{ctrl.emp.employee.empId}}</td>
+							<td>{{ctrl.emp.employee.name}}</td>
+							<td>{{ctrl.emp.employee.status}}</td>
+							<td>{{ctrl.tenure}}</td>
+							<td>{{ctrl.emp.employee.doj | date:'MM/dd/yyyy'}}</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="narrower">
+					<span class="block"><strong>Phone:</strong> {{ctrl.emp.employee.phone}}</span>
+					<span class="block"><strong>Willing to Relocate:</strong> {{ctrl.emp.employee.wtr}}</span>
+				</div>
+				<div>
+					<span class="block"><strong>Email:</strong> {{ctrl.emp.employee.email}}</span>
+					<div class="block">
+						<span><strong>WL:</strong> {{ctrl.emp.employee.wl}}</span>
+						<span class="space"><strong>CL:</strong> {{ctrl.emp.employee.cl}}</span>
+						<span class="space"><strong>HL:</strong> {{ctrl.emp.employee.hl}}</span>
+					</div>
+				</div>
+				<table class="table table-hover">
+					<col><col><col><col>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Vertical</th>
+							<th>Account</th>
+							<th>RM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Name</td>
+							<td>{{ctrl.emp.vertical.vertical.name}}</td>
+							<td>{{ctrl.emp.account.account.name}}</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>SPOC</td>
+							<td>{{ctrl.emp.vertical.spoc.name}}</td>
+							<td>{{ctrl.emp.account.spoc.name}}</td>
+							<td>{{ctrl.emp.rm.rm}}</td>
+						</tr>
+						<tr>
+							<td>Phone</td>
+							<td>{{ctrl.emp.vertical.spoc.phone}}</td>
+							<td>{{ctrl.emp.account.spoc.phone}}</td>
+							<td>{{ctrl.emp.rm.phone}}</td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>{{ctrl.emp.vertical.spoc.email}}</td>
+							<td>{{ctrl.emp.account.spoc.email}}</td>
+							<td>{{ctrl.emp.rm.email}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="profileInfo" data-ng-show="editing()">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Emp ID</th>
+							<th>Name</th>
+							<th>Status</th>
+							<th>Tenure of Status</th>
+							<th>DOJ</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input class="form-control smallField" data-ng-class="{required: (ctrl.emp.employee.empId == '')}" type="text" data-ng-model="ctrl.emp.employee.empId"/></td>
+							<td><input class="form-control longField" data-ng-class="{required: (ctrl.emp.employee.name == '')}" type="text" data-ng-model="ctrl.emp.employee.name"/></td>
+							<td>
+								<select class="form-control littlePad smallField" data-ng-model="ctrl.emp.employee.status" data-ng-options="x for x in ctrl.statusOptions"></select>
+							</td>
+							<td><input class="form-control mediumField littlePad" data-ng-class="{required: (ctrl.emp.employee.tenure == '')}" type="date" data-ng-change="updateTenure()" data-ng-model="ctrl.emp.employee.tenure" required/></td>
+							<td><input class="form-control mediumField littlePad" data-ng-class="{required: (ctrl.emp.employee.doj == '')}" type="date" data-ng-model="ctrl.emp.employee.doj" required/></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="narrow">
+					<span class="block"><strong>Phone:</strong> <input class="form-control mediumField" data-ng-class="{required: (ctrl.emp.employee.phone == '')}" type="text" data-ng-change="phoneControl()" data-ng-model="ctrl.emp.employee.phone"/></span>
+					<span class="block"><strong>Willing to Relocate:</strong>
+						<select class="form-control littlePad smallField" data-ng-model="ctrl.emp.employee.wtr" data-ng-options="x for x in ctrl.wtrOptions"></select>
+					</span>
+				</div>
+				<div>
+					<span class="block"><strong>Email:</strong> <input class="form-control longField" data-ng-class="{required: (ctrl.emp.employee.email == '')}" type="text" data-ng-model="ctrl.emp.employee.email"/></span>
+					<div class="block">
+						<span><strong>WL:</strong> <input class="form-control mediumField" data-ng-class="{required: (ctrl.emp.employee.wl == '')}" type="text" data-ng-model="ctrl.emp.employee.wl"/></span>
+						<span class="space"><strong>CL:</strong> <input class="form-control mediumField" type="text" data-ng-model="ctrl.emp.employee.cl"/></span>
+						<span class="space"><strong>HL:</strong> <input class="form-control mediumField" data-ng-class="{required: (ctrl.emp.employee.hl == '')}" type="text" data-ng-model="ctrl.emp.employee.hl"/></span>
+					</div>
+				</div>
+				<table class="table table-hover">
+					<col><col><col><col>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Vertical</th>
+							<th>Account</th>
+							<th>RM</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Name</td>
+							<td>
+								<select class="form-control mediumField littlePad" data-ng-class="{required: (ctrl.emp.vertical.vertical.id == 0)}" data-ng-model="ctrl.emp.vertical.vertical" data-ng-options="vert as vert.name for vert in ctrl.verticles track by vert.id" data-ng-change="verticalChange()"></select>
+							</td>
+							<td>
+								<select class="form-control mediumField littlePad" data-ng-model="ctrl.emp.account.account" data-ng-options="acc as acc.name for acc in ctrl.accounts track by acc.id" data-ng-change="accountChange()"></select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>SPOC</td>
+							<td>
+								<select class="form-control longField littlePad" data-ng-model="ctrl.emp.vertical.spoc" data-ng-options="spoc as spoc.name for spoc in ctrl.verticalSpocs track by spoc.id" data-ng-disabled="ctrl.emp.vertical.vertical.id == 0"></select>
+							</td>
+							<td>
+								<select class="form-control longField littlePad" data-ng-model="ctrl.emp.account.spoc" data-ng-options="spoc as spoc.name for spoc in ctrl.accountSpocs track by spoc.id" data-ng-disabled="ctrl.emp.account.account.id == 0"></select>
+							</td>
+							<td><input class="form-control longField" type="text" data-ng-model="ctrl.emp.rm.rm"/></td>
+						</tr>
+						<tr>
+							<td>Phone</td>
+							<td>{{ctrl.emp.vertical.spoc.phone}}</td>
+							<td>{{ctrl.emp.account.spoc.phone}}</td>
+							<td><input class="form-control longField" type="text" data-ng-model="ctrl.emp.rm.phone"/></td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td>{{ctrl.emp.vertical.spoc.email}}</td>
+							<td>{{ctrl.emp.account.spoc.email}}</td>
+							<td><input class="form-control longField" type="text" data-ng-model="ctrl.emp.rm.email"/></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="skills">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>
+								Skills
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="u in ctrl.emp.skills">
+							<td>
+								<span data-ng-bind="u.skillName" data-ng-show="!u.edit"></span>
+								<input class="form-control smallField" type="text" data-ng-show="u.edit" data-ng-model="u.skillName"/>
+								<i class="fa fa-close editIcon" data-ng-click="deleteSkill(u)" data-ng-show="editing()"></i>
+								<i class="fa fa-pencil editIcon" data-ng-click="editSkill(u)" data-ng-show="editing() && !u.edit"></i>
+								<i class="fa fa-check editIcon" data-ng-click="submitSkill(u)" data-ng-show="editing() && u.edit"></i>
+							</td>
+						</tr>
+						<tr data-ng-show="addingSkill()">
+							<td>
+								<input class="form-control smallField" type="text" data-ng-model="ctrl.newSkill"/>
+								<i class="fa fa-close editIcon" data-ng-click="deleteNewSkill()"></i>
+								<i class="fa fa-check editIcon" data-ng-click="submitNewSkill()"></i>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="button" data-ng-click="addSkill()" class="btn btn-primary addBtn" data-ng-show="editing() && !addingSkill()" data-ng-disabled="addingEmp"><i class="fa fa-plus"></i></button>
+			</div>
+			<div id="trainings">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>
+								Syntel Training
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr data-ng-repeat="u in ctrl.emp.trainings">
+							<td>
+								<span data-ng-bind="u.skillName" data-ng-show="!u.edit"></span>
+								<input class="form-control smallField" type="text" data-ng-show="u.edit" data-ng-model="u.skillName"/>
+								<i class="fa fa-close editIcon" data-ng-click="deleteTraining(u)" data-ng-show="editing()"></i>
+								<i class="fa fa-pencil editIcon" data-ng-click="editTraining(u)" data-ng-show="editing() && !u.edit"></i>
+								<i class="fa fa-check editIcon" data-ng-click="submitTraining(u)" data-ng-show="editing() && u.edit"></i>
+							</td>
+						</tr>
+						<tr data-ng-show="addingTrainedSkill()">
+							<td>
+								<input class="form-control smallField" type="text" data-ng-model="ctrl.newTrainedSkill"/>
+								<i class="fa fa-close editIcon" data-ng-click="deleteNewTrainedSkill()"></i>
+								<i class="fa fa-check editIcon" data-ng-click="submitNewTrainedSkill()"></i>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<button type="button" data-ng-click="addTrainedSkill()" class="btn btn-primary addBtn" data-ng-show="editing() && !addingTrainedSkill()" data-ng-disabled="addingEmp"><i class="fa fa-plus"></i></button>
+			</div>
+		</div>
+		<div id="communicationSection">
+			<label>Communication</label>
+			<form class="empForm" data-ng-submit="addComments()">
+				<textarea class="form-control commentText" data-ng-model="ctrl.comment" data-ng-disabled="addingEmp"></textarea>
+				<button type="submit" class="btn btn-primary saveBtn" data-ng-disabled="addingEmp">Save</button>
+			</form>
+			<div data-ng-repeat="u in ctrl.emp.comments | reverse" class="comments">
+				<i class="fa fa-close commentDeleteIcon" data-ng-click="deleteComment(u)" data-ng-show="editing()"></i>
+				<i class="fa fa-pencil commentEditIcon" data-ng-click="editComment(u)" data-ng-show="editing() && !u.edit"></i>
+				<i class="fa fa-check commentEditIcon" data-ng-click="submitComment(u)" data-ng-show="editing() && u.edit"></i>
+				<span data-ng-show="!u.edit"><strong>{{u.date | date:'MM/dd/yyyy'}}: </strong></span>
+				<span data-ng-show="!u.edit">{{u.comment}}</span>
+				<input class="form-control mediumField noPad" type="date" data-ng-model="u.date" data-ng-show="editing() && u.edit"/>
+				<textarea class="form-control commentText" data-ng-model="u.comment" data-ng-show="editing() && u.edit"></textarea>
+			</div>
+		</div>
+	</div>
+	<div id="historySection">
+		<label>History</label>
+		<div data-ng-repeat="u in ctrl.emp.history | reverse" class="history">
+			<span><strong>{{u.date | date:'MM/dd/yyyy'}}: </strong></span>
+			<span>{{u.text}}</span>
+		</div>
+	</div>
+</div>

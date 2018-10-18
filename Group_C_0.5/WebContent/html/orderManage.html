@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Orders</title>
+<script type="text/javascript">
+
+function ordersearch(input){
+	var value = input.toUpperCase();
+	var tbody = document.getElementById("ordertable");
+	var trtag = tbody.getElementsByTagName("tr");
+
+	for ( var i = 0; i < trtag.length; i++) {
+		tdtag = trtag[i].getElementsByTagName("td")[0];
+		tdtag1 = trtag[i].getElementsByTagName("td")[1];
+		tdtag2 = trtag[i].getElementsByTagName("td")[2];
+		tdtag3 = trtag[i].getElementsByTagName("td")[3];
+		tdtag4 = trtag[i].getElementsByTagName("td")[4];
+		if(tdtag || tdtag2 || tdtag1){
+			if(tdtag.innerHTML.toUpperCase().indexOf(value) > -1 || tdtag1.innerHTML.toUpperCase().indexOf(value) > -1 || tdtag2.innerHTML.toUpperCase().indexOf(value) > -1 || tdtag3.innerHTML.toUpperCase().indexOf(value) > -1 || tdtag4.innerHTML.toUpperCase().indexOf(value) > -1){
+				trtag[i].style.display = "";
+			}else {
+				trtag[i].style.display = "none";
+			}
+		}
+	}
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Order Management</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-panel"></i>
+								<p>About Us</p>
+                            </a>
+                        </li>
+						<li>
+                            <a href="../jsp/logout.jsp">
+								<i class="ti-settings"></i>
+								<p>Logout</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="content">
+        <div class="container-fluid">
+			<div class="">
+                    <div class="card">
+                        <div class="header">
+                            <input type="text"  class="form-control border-input" placeholder="Search Orders" onkeyup="ordersearch(this.value)">
+                        </div>
+       
+        
